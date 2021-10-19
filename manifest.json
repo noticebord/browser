@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "version": "1.1",
+    "name": "Noticebord Extension!",
+    "description": "Type whatever you want.",
+    "action": {
+        "default_popup": "notice.html",
+        "default_title": "Create a public notice!",
+        "default_icon": "nblogo(1).png"
+    },
+    "permissions": [
+        "tabs"
+    ]
+}

@@ -1,54 +1,65 @@
-body {
-    background: #ffffff;
-}
-
-form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, .1);
-    padding: 100px;
-}
-
-label {
-    font-family: sans-serif;
-    letter-spacing: 6px;
-    text-transform: uppercase;
-    font-size: .8em;
-    color: #FFF;
-}
-
-input[type=text] {
-    display: inline-block;
-    border: none;
-    text-align: left;
-    box-shadow: 3px 2px rgba(121, 83, 210, .3);
-    padding: 10px;
-    width: 100%;
-    margin: 10px 0;
-    background: transparent;
-    color: #FFF;
-}
-
-input[type=text]:focus {
-    background: none;
-    border: none;
-    color: #FFF;
-}
-
-button {
-    background: transparent;
-    color: #FFF;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin: 20px 0;
-    padding: 10px 30px;
-    border: 2px solid #FFF;
-}
-
-button:hover {
-    background: transparent;
-    border: 2px solid rgba(69, 39, 160, .4);
-}
+ @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+ body {
+     background: #ffffff;
+     margin: 0;
+     padding: 0;
+     font-family: 'Poppins', sans-serif;
+     min-height: 400px;
+     min-width: 300px;
+ }
+ 
+ form {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     padding: 100px;
+     border-radius: 15px;
+     box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+ }
+ 
+ label,
+ p {
+     margin-top: 10px;
+     margin-bottom: 10px;
+     font-size: 20px;
+     font-family: 'Poppins', sans-serif;
+ }
+ 
+ input[type=text] {
+     width: 95%;
+     padding: 10px;
+     font-size: 20px;
+     margin-bottom: 20px;
+     font-family: 'Poppins', sans-serif;
+     border-radius: 15px;
+ }
+ 
+ input:focus,
+ textarea:focus {
+     outline: none !important;
+     border: solid #6875F5;
+ }
+ 
+ textarea {
+     padding: 20px;
+     font-size: 20px;
+     font-family: 'Poppins', sans-serif;
+     border-radius: 15px;
+ }
+ 
+ button {
+     background: transparent;
+     font-family: 'Poppins', sans-serif;
+     font-size: 20px;
+     margin: 30px 0;
+     padding: 10px 30px;
+     border: 2px solid;
+     border-radius: 15px;
+ }
+ 
+ button:hover {
+     background: transparent;
+     border: 2px solid #6875F5;
+ }

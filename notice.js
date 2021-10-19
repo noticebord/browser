@@ -1,7 +1,7 @@
 let form = document.getElementById("form")
 let title = document.getElementById("title")
 let body = document.getElementById("body")
-
+let submitBtn = document.getElementById("submit")
 
 
 form.addEventListener('submit', function(e) {
@@ -11,21 +11,25 @@ form.addEventListener('submit', function(e) {
     fetch("https://noticebord.herokuapp.com/api/notices", {
         method: 'POST',
         body: JSON.stringify({
-            "title": "title",
-            "body": "body",
+            "title": title.value,
+            "body": body.value,
             "anonymous": true,
             "public": true
         }),
         headers: {
-            "Content-type": "application/json , charset=UTF-8"
+            "Content-type": "application/json , charset=UTF-8",
+            "Accept": "application/json "
         }
     })
 
     .then(function(response) {
-            return response.json()
-        })
-        .then(function(data) {
-            console.log(data)
-        })
+        let data = response.json()
+        console.log(data)
+
+        //clear notice form 
+        title.value = ""
+        body.value = ""
+        alert(`Notice is saved!`)
+    })
 
 })
