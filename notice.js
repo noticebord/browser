@@ -12,23 +12,23 @@ form.addEventListener('submit', function(e) {
         body: JSON.stringify({
             "title": title.value,
             "body": body.value,
+            "topics" : ["extension"],
             "anonymous": true,
             "public": true
         }),
         headers: {
-            "X-Noticebord-Client": "browser",
             "Content-type": "application/json , charset=UTF-8",
             "Accept": "application/json "
         }
     })
-
     .then(function(response) {
-        const data = response.json()
+        response.json().then(function (data) {
+            alert(`Your notice (${data.title}) has been saved!`)
+        })
 
         //clear notice form 
         title.value = ""
         body.value = ""
-        alert(`Your notice (${data.title}) has been saved!`)
     })
 
 })
