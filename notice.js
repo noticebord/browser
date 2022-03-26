@@ -12,7 +12,7 @@ form.addEventListener('submit', function(e) {
         body: JSON.stringify({
             "title": title.value,
             "body": body.value,
-            "topics" : ["extension"],
+            "topics" : [],
             "anonymous": true,
             "public": true
         }),
